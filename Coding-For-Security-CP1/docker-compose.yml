@@ -1,0 +1,15 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: cp1-mongo
+    ports:
+      - "27017:27017"
+
+  mysql:
+    image: mysql:8
+    container_name: cp1-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cp1_seguranca
+    ports:
+      - "3306:3306"
